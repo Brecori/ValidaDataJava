@@ -69,9 +69,9 @@ public class Data {
     }
 
     public boolean validaDia(int dia, int mes) {
-        if (mes == 2 && ehBissexto(getAno()) && dia >=29) {
+        if (mes == 2 && ehBissexto(getAno()) && dia >29) {
             return false;
-        } else if (mes == 2 && !ehBissexto(getAno()) && dia >=28) {
+        } else if (mes == 2 && !ehBissexto(getAno()) && dia >28) {
             return false;
         } else if ((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30) {
             return false;
