@@ -18,17 +18,17 @@ public class Data {
         return ano;
     }
 
-    public boolean isBissexto() {
-        return bissexto;
-    }
 
     public boolean ehBissexto(int ano) {
-        if (ano % 4 == 0 && ano % 400 == 0) {
-            return true;
+        boolean isBissexto = false;
+        if (ano % 400 == 0) {
+            return isBissexto = true;
         }
-        else {
-            return false;
+        if (ano % 4 == 0 && ano % 100 != 0) {
+            return isBissexto = true;
         }
+        return isBissexto;
+
     }
 
     public Data (int dia, int mes, int ano) {
